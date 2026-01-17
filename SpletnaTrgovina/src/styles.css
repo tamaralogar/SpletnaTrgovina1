@@ -1,3 +1,27 @@
-a.active {
-    font-weight: bold;
+body {
+    background-image: url('/assets/backround_pattern.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-container {
+    background-color: rgb(255, 255, 255, 0.7); 
+    width: 80%;
+    margin: 0 auto;
+    min-height: 100vh;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+}
+/* mali zasloni */
+@media (max-width: 768px) {
+    .main-container {
+        width: 100%;
+        padding: 15px;
+    }
+}
+.sticky-top {
+    background-color: rgba(5, 90, 30, 0.95) !important; 
+    border-bottom: 2px solid #d4af37; 
+   
 }

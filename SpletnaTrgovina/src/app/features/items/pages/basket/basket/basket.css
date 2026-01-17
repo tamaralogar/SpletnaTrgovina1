@@ -1,2 +1,10 @@
 .basket { background-color: rgba(5, 5, 90); }
 .nobasket { background-color: rgba(5, 90, 30); }
+
+.list-group-item {
+    border: 2px solid #d4af37 !important; 
+    border-radius: 10px !important;      
+    overflow: hidden;                    
+    background-color: white;              
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
