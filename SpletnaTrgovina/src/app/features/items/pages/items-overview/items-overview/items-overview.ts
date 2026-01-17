@@ -87,6 +87,7 @@ export class ItemsOverview implements OnInit {
   ToggleBasket(item: Item): void {
     const alreadyIn = this.basketService.isInBasket(item);
 
+  // Če je item že v kočarici, da ga po vrnitvi iz košarice ne moremo še enkrat dodat vanjo 
     if (!alreadyIn) {
       this.basketService.addToBasket(item);
       item.basket = true;
@@ -102,7 +103,7 @@ export class ItemsOverview implements OnInit {
   private loadItems() {
     console.log('Loading items...');
     this.items = (jsonitems as any[]).map((jsonItem) => {
-      const isCurrentlyInBasket = this.basketService.isInBasket({ id: jsonItem.id } as Item);
+      const isCurrentlyInBasket = this.basketService.isInBasket({ id: jsonItem.id } as Item); //da nastavi ali je item v košarici ali ne
 
       const newItem = new Item(
         jsonItem.id,

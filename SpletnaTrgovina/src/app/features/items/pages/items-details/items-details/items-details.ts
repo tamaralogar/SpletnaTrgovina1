@@ -11,29 +11,26 @@ import { BasketService } from '../../../../../shared/services/basket';
   styleUrl: './items-details.css',
 })
 export class ItemsDetails {
-  // Item to display in the modal
-  @Input() item!: Item; // za items-overview
+ 
+  @Input() item!: Item; // za items-overview --> katerega naj odpre v modal
 
-  // When true, ToggleBasket is disabled (used from basket modal)
   @Input() disableToggleBasket: boolean = false; // za basket
 
-  // Controls if "Odstrani iz košarice" is shown when item is in basket
-  // items-overview => true | basket => false
-  @Input() showRemoveButton: boolean = true;
+  @Input() showRemoveButton: boolean = true; //za basket, da ko je item v basketu ne dela gumb na modal odstrani iz košarice
 
   @Output() basketChanged = new EventEmitter<Item>();
 
   constructor(private basketService: BasketService) {}
 
   ToggleBasket(item: Item): void {
-    // If toggling is disabled (e.g. from basket modal), just exit
+    
     if (this.disableToggleBasket) {
       console.log('Spreminjanje košarice je onemogočeno.');
       return;
     }
 
     const alreadyIn = this.basketService.isInBasket(item);
-
+    //spreminjanje ali je v kočarici ali ne
     if (!alreadyIn) {
       this.basketService.addToBasket(item);
       item.basket = true;

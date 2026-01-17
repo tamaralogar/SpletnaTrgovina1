@@ -14,7 +14,7 @@ const routes: Routes = [
   {    path: 'login', component: Login   },
   {    path: 'signup', component: Signup   },
   {    path: 'items', component: ItemsOverview   },
-  {    path: 'items/details', component: ItemsDetails   },
+  {    path: 'items/details', component: ItemsDetails   }, //tega zdej ni več
   {    path: 'items/basket', component: Basket },
   {    path: 'checkout', component: Checkout },
   {    path: '**', redirectTo: '/items'}

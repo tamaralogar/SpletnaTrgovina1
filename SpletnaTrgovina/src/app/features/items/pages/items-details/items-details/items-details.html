@@ -40,21 +40,23 @@
                                     class="d-flex flex-column align-items-center justify-content-center p-3 gap-2"
                                     style="min-width: 250px;">
 
-                                    <!--Item NOT in basket -->
+                                   <!--če ni v košarici-->
                                     @if (!isInBasket(item)) {
                                         <button (click)="ToggleBasket(item)" class="btn btn-outline-light"
                                             [disabled]="disableToggleBasket">
                                             Dodaj v košarico
                                         </button>
                                     }
-                                    <!--Item IS in basket -->
+                                   <!--če je v košarici-->
                                     @else {
+                                        <!--to se vidi če gremo na podrobnosti znotraj glavne strani-->
                                         @if (showRemoveButton) {
                                             <button (click)="ToggleBasket(item)" class="btn btn-outline-light"
                                                 [disabled]="disableToggleBasket">
                                                 Odstrani iz košarice
                                             </button>
                                         }
+                                        <!--Da če gremo na podrobnosti znotraj košarice, ne moremo iz modalnega okna odstranjat izdelkov-->
                                         @else {
                                             <span class="text-light">
                                                 Zadnji kos! 
