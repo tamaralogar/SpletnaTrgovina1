@@ -1,0 +1,10 @@
+.basket { background-color: rgba(5, 90, 30);
+    opacity: 0.6 !important }
+
+
+.nobasket { background-color: rgba(5, 90, 30);
+    opacity: 1 !important }
+
+.writing-size-bigger {
+    font-size: 20px;
+}

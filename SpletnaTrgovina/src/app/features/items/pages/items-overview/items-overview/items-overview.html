@@ -1,0 +1,53 @@
+
+
+<br />
+<h2 style="padding-left: 10%;">Ponudba:</h2>
+<div class="container-fluid" style="padding-left: 10%; padding-right: 10%;">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3"
+         style="justify-content: center; padding: 20px;">
+        
+        @for (item of items; track item.id; let i = $index) {
+        
+            <div class="col" [ngClass]="i % 2 === 0 ? 'd-block' : 'd-none'">
+                
+                <div class="card h-100 shadow-sm" [ngClass]="item.basket ? 'basket' : 'nobasket'">
+                    <img src="{{ item.slika }}" class="card-img-top" alt="..." />
+
+                    <div class="card-body d-flex flex-column" style="color: hsl(0, 0%, 100%);">
+                        <h5 class="card-title">{{ item.naziv }}</h5>
+                        <p class="card-text mb-0">Cena: {{ item.cena }} €</p>
+                        <p class="card-text">Velikost: {{ item.velikost }}</p>
+
+                        <div class="mt-auto d-flex justify-content-between">
+                            <button class="btn btn-outline-light" data-bs-toggle="modal"
+                                    [attr.data-bs-target]="'#detailsCard' + item.id">
+                                Podrobnosti
+                            </button>
+
+                            @if(!item.basket){
+                                <button (click)="ToggleBasket(item)" class="btn btn-outline-light">
+                                    Dodaj v košarico
+                                </button>
+                            }
+                            @else{
+                                <button (click)="ToggleBasket(item)" class="btn btn-outline-light">
+                                    Odstrani iz košarice
+                                </button>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal opened from ITEMS OVERVIEW:
+                     - can toggle basket
+                     - remove button is visible when in basket -->
+                <app-items-details
+                    [item]="item"
+                    [disableToggleBasket]="false"
+                    [showRemoveButton]="true">
+                </app-items-details>
+                
+            </div>
+        }
+    </div>
+</div>

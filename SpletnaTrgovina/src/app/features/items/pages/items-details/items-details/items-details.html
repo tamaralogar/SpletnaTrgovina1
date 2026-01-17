@@ -1,0 +1,77 @@
+<div class="modal fade" tabindex="-1" [attr.id]="'detailsCard' + item.id" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Podrobnosti izdelka</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <div style="padding-left: 2%; padding-right: 2%;">
+                    <div class="card mb-3 overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img [src]="item.slika" class="img-fluid h-100" alt="Izdelek"
+                                    style="object-fit: cover; min-height: 250px;" />
+                            </div>
+
+                            <div class="col-md-8 d-flex flex-column flex-md-row">
+                                <div class="card-body flex-grow-1">
+                                    <h1 class="card-title">{{ item.naziv }}</h1>
+                                    <hr class="border-success border-3 opacity-100" />
+
+                                    <h3 class="card-subtitle mb-2 text-muted">Cena: {{ item.cena }} €</h3>
+
+                                    <h3 class="card-subtitle mb-2 text-muted" [hidden]="!item.barva">
+                                        Barva: {{ item.barva }}
+                                    </h3>
+
+                                    <h3 class="card-subtitle mb-2 text-muted">
+                                        Velikost: {{ item.velikost }}
+                                    </h3>
+
+                                    <br />
+                                    <p class="card-text writing-size-bigger">{{ item.opis }}</p>
+                                </div>
+
+                                <div [ngClass]="isInBasket(item) ? 'basket' : 'nobasket'"
+                                    class="d-flex flex-column align-items-center justify-content-center p-3 gap-2"
+                                    style="min-width: 250px;">
+
+                                    <!--Item NOT in basket -->
+                                    @if (!isInBasket(item)) {
+                                        <button (click)="ToggleBasket(item)" class="btn btn-outline-light"
+                                            [disabled]="disableToggleBasket">
+                                            Dodaj v košarico
+                                        </button>
+                                    }
+                                    <!--Item IS in basket -->
+                                    @else {
+                                        @if (showRemoveButton) {
+                                            <button (click)="ToggleBasket(item)" class="btn btn-outline-light"
+                                                [disabled]="disableToggleBasket">
+                                                Odstrani iz košarice
+                                            </button>
+                                        }
+                                        @else {
+                                            <span class="text-light">
+                                                Zadnji kos! 
+                                            </span>
+                                        }
+                                    }
+
+                                    <button type="button" class="btn btn-outline-light w-100" data-bs-dismiss="modal">
+                                        Zapri
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

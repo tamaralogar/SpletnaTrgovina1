@@ -1,0 +1,39 @@
+<div class="container p-4 mt-5 shadow rounded" style="max-width: min(800px, 95%);">
+
+   <h2 style="text-align: center;"> Prijava</h2>
+    <hr class="border-success border-3 opacity-100">
+    <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">E-poštni naslov</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="primer@gmail.com" required
+            #email="ngModel" name="email" [(ngModel)]="oldUser.email"
+                [ngClass]="{'is-invalid': email.invalid && (email.touched || email.dirty || loginForm.submitted),
+                            'is-valid': email.valid && (email.touched || email.dirty || loginForm.submitted)}">
+            @if (email.invalid && (email.touched || email.dirty || loginForm.submitted)) {
+            <div class="invalid-feedback d-block">
+                Obvezno polje!
+            </div>}
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Geslo</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Geslo" required
+            name="password" [(ngModel)]="oldUser.password" #password="ngModel"
+                [ngClass]="{'is-invalid': password.invalid && (password.touched || password.dirty || loginForm.submitted),
+                            'is-valid': password.valid && (password.touched || password.dirty || loginForm.submitted)}">
+            @if (password.invalid && (password.touched || password.dirty || loginForm.submitted)) {
+            <div class="invalid-feedback d-block">
+                Obvezno polje!  </div>}
+        </div>
+        <!--nevem če rabim
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Zapomni si me</label>
+        </div>-->
+        <div class="d-flex mb-3">
+            <div class="p-2"><button type="submit" class="btn btn-success" [disabled]="password.invalid">Prijava</button></div>
+            <div class="ms-auto p-2"><a href="" class="btn btn-link">Še nimaš računa?</a></div>
+        </div>
+    </form>
+
+
+</div>

@@ -1,0 +1,68 @@
+<div class="container p-4 mt-5 shadow rounded" style="max-width: min(800px, 95%);">
+
+    <h2 style="text-align: center;"> Registracija</h2>
+    <hr class="border-success border-3 opacity-100" />
+    <form (ngSubmit)="onSubmit(registrationForm)" #registrationForm="ngForm">
+        <div class="mb-3 user.username">
+            <label for="exampleInputEmail1" class="form-label">Uporabniško ime</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Primer" required #userName="ngModel" name="userName" [(ngModel)]="newUser.username"
+                [ngClass]="{'is-invalid': userName.invalid && (userName.touched || userName.dirty || registrationForm.submitted),
+                            'is-valid': userName.valid && (userName.touched || userName.dirty || registrationForm.submitted)}">
+            @if (userName.invalid && (userName.touched || userName.dirty || registrationForm.submitted)) {
+            <div class="invalid-feedback d-block">
+                Obvezno polje!
+            </div>
+            }
+        </div>
+        <div class="mb-3 user.email">
+            <label for="exampleInputEmail1" class="form-label">E-poštni naslov</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="primer@gmail.com" name="email" required [(ngModel)]="newUser.email" #email="ngModel"
+                [ngClass]="{'is-invalid': email.invalid && (email.touched || email.dirty || registrationForm.submitted),
+                            'is-valid': email.valid && (email.touched || email.dirty || registrationForm.submitted)}">
+            @if (email.invalid && (email.touched || email.dirty || registrationForm.submitted)) {
+            <div class="invalid-feedback d-block">
+                Obvezno polje!
+            </div>}
+            <div class="mb-3 user.password">
+                <label for="exampleInputPassword1" class="form-label">Geslo</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Geslo"
+                    name="password" required [(ngModel)]="newUser.password" #password="ngModel"
+                    [ngClass]="{'is-invalid': password.invalid && (password.touched || password.dirty || registrationForm.submitted),
+                            'is-valid': password.valid && (password.touched || password.dirty || registrationForm.submitted)}">
+                @if (password.invalid && (password.touched || password.dirty || registrationForm.submitted)) {
+                <div class="invalid-feedback d-block">
+                    Obvezno polje!
+                </div>}
+                <div class="mb-3 user.confirmPassword">
+                    <label for="exampleInputPassword2" class="form-label">Ponovi geslo</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Geslo"
+                        name="confirmPassword" required [(ngModel)]="newUser.confirmPassword" #confirmPassword="ngModel"
+                        [ngClass]="{'is-invalid': confirmPassword.invalid && (confirmPassword.touched || confirmPassword.dirty || registrationForm.submitted),
+                            'is-valid': confirmPassword.valid && (confirmPassword.touched || confirmPassword.dirty || registrationForm.submitted)}">
+                    @if (confirmPassword.invalid && (confirmPassword.touched || confirmPassword.dirty ||
+                    registrationForm.submitted)) {
+                    <div class="invalid-feedback d-block">
+                        Obvezno polje!
+                    </div>}
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="confirmedCheck1" name="confirmed"
+                            [(ngModel)]="confirmed">
+                        <label class="form-check-label" for="exampleCheck1">Strinjam se s pogoji uporabe</label>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="p-2">
+                            <button [disabled]="!confirmed || registrationForm.invalid" type="submit"
+                                class="btn btn-success">Registriraj me</button>
+                        </div>
+                        <div class="ms-auto p-2">
+                            <a href="" class="btn btn-link">Že imaš račun?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,66 @@
+
+<div class="container mt-5 mb-5" style="max-width: 800px;">
+    <h2 style="text-align: center; margin-bottom: 20px;">Vaša košarica</h2>
+
+    <ul class="list-group">
+        
+        @for (item of items; track item.id) 
+        {<li class="list-group-item">
+
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src={{item.slika}} class="img-fluid h-100"
+                        alt="Izdelek" style="object-fit: cover; min-height: 250px;">
+                </div>
+
+                <div class="col-md-8 d-flex flex-column flex-md-row">
+
+                    <div class="card-body flex-grow-1 d-flex flex-column align-items-center">
+                        <h2 class="card-title">{{item.naziv}}</h2>
+                        <h4 class="card-subtitle mb-0 text-muted">Cena: {{item.cena}} €</h4>
+                        <h4 class="card-subtitle mb-0 text-muted">Velikost: {{item.velikost}}</h4>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center justify-content-center p-3 gap-2 nobasket">
+                        <!-- Basket page remove button (kept) -->
+                        <button class="btn btn-outline-light w=100"
+                                (click)="basketService.removeFromBasket(item)">
+                            Odstrani iz košarice
+                        </button>
+
+                        <button class="btn btn-outline-light" data-bs-toggle="modal"
+                                [attr.data-bs-target]="'#detailsCard' + item.id">
+                            Podrobnosti
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal opened from BASKET:
+                 - toggling is disabled
+                 - remove button is hidden in the modal -->
+            <app-items-details
+                [item]="item"
+                [disableToggleBasket]="true"
+                [showRemoveButton]="false">
+            </app-items-details>
+
+        </li>}
+        
+    </ul>
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center p-3 gap-2"
+        style="background-color: rgba(5, 90, 30); color: white">
+        <h2>Skupaj:</h2>
+        <h2>{{basketService.getTotalPrice()}} €</h2>
+    </div>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center p-3 gap-2"
+        style="background-color: rgba(5, 90, 30)">
+        <a [routerLink]="['/items']" class="btn btn-outline-light w-100 w-md-auto">Nadaljuj z ogledom ponudbe</a>
+        <a [routerLink]="['/checkout']" class="btn btn-outline-light w-100 w-md-auto">Zaključi nakup</a>
+    </div>
+
+</div>
+
+
+

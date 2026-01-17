@@ -1,0 +1,413 @@
+[
+  {
+    "id": 1,
+    "naziv": "Obleka",
+    "cena": 80,
+    "slika": "images/pexels-alina-rossoshanska-338724645-24740602.jpg",
+    "opis": "Elegantna in svečana obleka, primerna za posebne priložnosti. Barva in material: Obleka je v globoki temno zeleni barvi (smaragdno zeleni). Prekrita je z bleščicami, ki ustvarjajo prestižen videz. Kroj: Model z razkritimi rameni s prosojno mrežico na dekolteju in kratkimi napihnjenimi rokavi. Linija: Oprijeta, ki se v spodnjem delu razširi, da poudari postavo. Sega do tal.",
+    "velikost": "S",
+    "barva": "Zelena",
+    "basket": false
+  },
+  {
+    "id": 2,
+    "naziv": "Krilo",
+    "cena": 15,
+    "slika": "images/pexels-andrea-musto-135941147-21367282.jpg",
+    "opis": "Mini krilo iz umetnega semiša z vezalkami. To trendovsko mini krilo v topli rjavi (karamelni) barvi je popolna izbira za drzen in moden videz. \n\nIzdelano je iz mehkega materiala z videzom semiša, ki daje oblačilu bogato teksturo in pridih luksuza. \n\nDetajl z vezalkami: Krilo izstopa zaradi atraktivnega detajla prepletenih vezalk na sprednji strani, ki tečejo skozi kovinske obročke. Ta element omogoča rahlo prilagajanje oprijetosti in doda 'edgy' pridih. \n\nKroj: Visok pas in oprijet (bodycon) kroj lepo poudarita postavo in podaljšata noge. \n\nVsestranskost: Odlično se kombinira z oprijetimi bodiji, pleteninami ali klasičnimi srajcami.",
+    "velikost": "S",
+    "barva": "",
+    "basket": false
+  },
+  {
+    "id": 3,
+    "naziv": "Jakna",
+    "cena": 20,
+    "slika": "images/pexels-andresdazaph-17160333.jpg",
+    "opis": "Klasična denim jakna v svetlo modri barvi. Izdelana iz trpežnega bombažnega denima s prepoznavnimi kovinskimi gumbi in prsnimi žepi. \n\nZaradi brezčasnega kroja in vsestranskosti je popolna izbira za plastenje čez vsakodnevne kombinacije. \n\nKroj: Klasičen, rahlo teliran model z dolgimi rokavi.",
+    "velikost": "M",
+    "barva": "modra",
+    "basket": false
+  },
+  {
+    "id": 4,
+    "naziv": "Jakna",
+    "cena": 40,
+    "slika": "images/pexels-aqib-shahid-1528024-11274776.jpg",
+    "opis": "Moška prešita zimska jakna v olivno zeleni barvi. Odlikuje jo toplo polnilo, kapuca z obrobo iz umetnega krzna in visok zaščitni ovratnik. \n\nIdealna izbira za hladne zimske razmere, ki združuje funkcionalnost in moden videz. \n\nKroj: Klasičen zimski model z rebrastimi patenti na rokavih.",
+    "velikost": "M",
+    "barva": "zelena",
+    "basket": false
+  },
+  {
+    "id": 5,
+    "naziv": "Obleka",
+    "cena": 25,
+    "slika": "images/pexels-artepixel-prostudio-1289782065-29235353.jpg",
+    "opis": "Blesceca mini obleka v zlatih odtenkih, opremljena z opaznimi resicami na dekolteju. \n\nIdealen kos za vecerno zabavo ali posebne dogodke, kjer zelite izstopati. \n\nKroj: Oprijet mini model s tankimi naramnicami.",
+    "velikost": "L",
+    "barva": "",
+    "basket": false
+  },
+  {
+    "id": 6,
+    "naziv": "Obleka",
+    "cena": 45,
+    "slika": "images/pexels-arturo-rodriguez-ortega-1310043052-25283918.jpg",
+    "opis": "Dolga vecerna obleka iz svetlecega satena v globoki zeleni barvi. Odlikujejo jo nežen cowl izrez, nastavljive naramnice in visok stranski razporek. \n\nPopolna izbira za glamurozne priložnosti, ki združuje udobje in prefinjen stil. \n\nKroj: Dolga obleka A-linije z razporkom.",
+    "velikost": "M",
+    "barva": "zelena",
+    "basket": false
+  },
+  {
+    "id": 7,
+    "naziv": "Jakna",
+    "cena": 35,
+    "slika": "images/pexels-atahandemir-16282756.jpg",
+    "opis": "Vsestranska lahka prešita jakna v mornarsko modri barvi. Odlikujejo jo horizontalno prešivanje, stoječ ovratnik in oprijet kroj. \n\nPopolna izbira za plastenje ali samostojno nošenje v prehodnem obdobju. \n\nKroj: Klasičen oprijet model z dolgimi rokavi.",
+    "velikost": "M",
+    "barva": "Črna",
+    "basket": false
+  },
+  {
+    "id": 8,
+    "naziv": "Krilo",
+    "cena": 10,
+    "slika": "images/pexels-breno-cardoso-149064345-25052953.jpg",
+    "opis": "Klasicno krilo v temno sivi barvi z visokim pasom in elegantnimi gubami. \n\nZaradi A-linije in udobnega materiala je popolna izbira za vsakodnevno eleganco. \n\nKroj: Sirse krilo A-linije z dolžino do kolen.",
+    "velikost": "S",
+    "barva": "Črna",
+    "basket": false
+  },
+  {
+    "id": 9,
+    "naziv": "Obleka",
+    "cena": 90,
+    "slika": "images/pexels-builtbyking-9928080.jpg",
+   "opis": "Edinstvena svecana obleka v soncno rumeni barvi. Zgornji del je bogato okrašen z biseri in cvetlicnimi aplikacijami, krilo pa krasi drzen visok razporek. \n\nIzjemen kos za posebne priložnosti, ki združuje rocno izdelane detajle in dramaticen kroj. \n\nKroj: Dolga obleka z vlecko in visokim razporkom.",
+    "velikost": "L",
+    "barva": "",
+    "basket": false
+  },
+  {
+    "id": 10,
+    "naziv": "Obleka",
+    "cena": 20,
+    "slika": "images/pexels-byb-byb-412101727-27333552.jpg",
+    "opis": "Romantična dolga obleka z drobnim cvetličnim vzorcem. Odlikujejo jo modni napihnjeni rokavi, kvadraten izrez in elastičen pas, ki poudari postavo. \n\nIdealna izbira za poletne dni, ki združuje udobje in ženstveno eleganco. \n\nKroj: Maksi obleka z nabranim zgornjim delom in prosto padajočim krilom.",
+    "velikost": "M",
+    "barva": "Črna",
+    "basket": false
+  },
+  {
+    "id": 11,
+    "naziv": "Majica",
+    "cena": 10,
+    "slika": "images/pexels-cottonbro-6626903.jpg",
+    "opis": "Udoben moški pulover v beli barvi s klasičnim okroglim izrezom in raglan rokavi. \n\nIzdelan iz mehke pletenine, ki zagotavlja udobje čez cel dan. Odličen kos za sproščene vsakodnevne kombinacije. \n\nKroj: Sproščen model s poudarkom na udobju.",
+    "velikost": "XL",
+    "barva": "Bela",
+    "basket": false
+  },
+  {
+    "id": 12,
+    "naziv": "Hlače",
+    "cena": 20,
+    "slika": "images/pexels-daniel-duarte-270529097-15349647.jpg",
+    "opis": "Trendovske hlače s širokimi hlačnicami v topli gorčično rumeni barvi. Izdelane iz trpežnega bombažnega materiala.",
+    "velikost": "XL",
+    "barva": "",
+    "basket": false
+  },
+  {
+    "id": 13,
+    "naziv": "Obleka",
+    "cena": 150,
+    "slika": "images/pexels-daniel-moises-magulado-199841-7612730.jpg",
+    "opis": "Prestižna poročna obleka v klasični beli barvi z bogatimi čipkastimi detajli. Zgornji del krasijo prosojne vezenine s cvetličnimi motivi in drobnimi biseri, asimetrično spodnje krilo pa prehaja v elegantno vlečko, ki pričara pravljični videz.",
+    "velikost": "S",
+    "barva": "Bela",
+    "basket": false
+  },
+  {
+    "id": 14,
+    "naziv": "Krilo",
+  "cena": 15,
+  "slika": "images/pexels-darkshadephotos-29168536.jpg",
+  "opis": "Ženstveno krilo srednje dolžine, ki ga krasi umetniški abstrakten vzorec v toplih zemeljskih in rdečkastih tonih. Visok, rahlo nabran pas ustvari laskavo silhueto, medtem ko lahkoten in zračen material poskrbi za čudovito valovanje ob vsakem koraku. Krilo je izjemno vsestransko, saj se odlično kombinira tako s preprostimi bombažnimi majicami za sproščen dnevni videz kot tudi z elegantnejšimi bluzami za posebne priložnosti.",
+  "velikost": "M",
+    "barva": "Rdeča",
+    "basket": false
+  },
+  {
+    "id": 15,
+    "naziv": "Majica",
+    "cena": 5,
+    "slika": "images/pexels-dayong-tien-681073045-18257675.jpg",
+    "opis": "Klasična bela majica s kratkimi rokavi, ki predstavlja osnovni temelj vsake garderobe. Izdelana je iz vrhunskega, mehkega bombaža, ki zagotavlja izjemno zračnost in udobje pri vsakodnevnem nošenju. Majica ima ojačan okrogel ovratnik, ki ohranja svojo obliko tudi po večkratnem pranju, njen brezčasen raven kroj pa omogoča enostavno kombiniranje s poljubnimi kosi oblačil, od sproščenega džinsa do elegantnih suknjičev.",
+    "velikost": "XL",
+    "barva": "Bela",
+    "basket": false
+  },
+  {
+    "id": 16,
+    "naziv": "Obleka",
+    "cena": 180,
+    "slika": "images/pexels-diana-reyes-227887231-32628114.jpg",
+    "opis": "Prestižna večerna obleka v nežno rožnatih in vijoličnih odtenkih, ki izstopa s svojo dramatično silhueto. Celotna obleka je prekrita s svetlečimi luskami in bisernimi nanizi, ki ustvarjajo bogato teksturo. Najbolj opazen element je razkošno ogrinjalo iz tila z voluminoznimi volančki, ki se vijejo okoli telesa in prehajajo v dolgo vlečko, kar zagotavlja nepozaben nastop na rdeči preprogi ali svečanem plesu.",
+    "velikost": "XL",
+    "barva": "",
+    "basket": false
+  },
+  {
+    "id": 17,
+    "naziv": "Majica",
+    "cena": 25,
+    "slika": "images/pexels-ekaterina-bolovtsova-6690971.jpg",
+    "opis": "Igriv in topel praznični pulover v temno modri barvi, ki ga krasi velik motiv severnjaškega jelena z rdečim nosom in belimi snežinkami. Izdelan je iz mehke in goste pletenine, ki zagotavlja udobje in toplino v zimskih dneh. Rebrasti patenti na ovratniku, rokavih in spodnjem robu poskrbijo za odlično prileganje postavi, medtem ko humoren dizajn vnaša veselje v vsako decembrsko druženje.",
+    "velikost": "M",
+    "barva": "Črna",
+    "basket": false
+  },
+  {
+    "id": 18,
+    "naziv": "Hlače",
+    "cena": 35,
+    "slika": "images/pexels-eliasdecarvalho-1006991.jpg",
+    "opis": "Elegantne hlace s tankimi navpicnimi crtami v temni barvi. Visok pas in raven kroj poskrbita za profesionalno silhueto. \n\nIdealen kos za poslovno garderobo, ki združuje klasiko in moderen stil. \n\nKroj: Raven 'slim-fit' model z visokim pasom.",
+    "velikost": "M",
+    "barva": "Črna",
+    "basket": false
+  },
+  {
+    "id": 19,
+    "naziv": "Krilo",
+    "cena": 45,
+    "slika": "images/pexels-emrekeshavarz-19471540.jpg",
+    "opis": "Čudovito maksi krilo v globoki rdeči barvi, ki s svojim padajočim krojem pričara elegantno in ženstveno silhueto. Visok pas poudari postavo, bogat material pa poskrbi za prefinjen videz in udobje pri nošenju. Krilo je idealno za ustvarjanje retro navdihnjenih stilov, saj se odlično kombinira s pikčastimi bluzami, klobuki in klasičnimi usnjenimi gležnjarji za popoln jesenski videz.",
+    "velikost": "S",
+    "barva": "Rdeča",
+    "basket": false
+  },
+  {
+    "id": 20,
+    "naziv": "Hlače",
+    "cena": 35,
+    "slika": "images/pexels-enginakyurt-17135748.jpg",
+    "opis": "Udobne ženske hlače v nevtralni peščeno bež barvi, ki so popolna izbira za sproščen vsakodnevni videz. Izdelane so iz lahkotne, rahlo strukturirane tkanine, ki zagotavlja zračnost skozi ves dan. Posebnost hlač je elastičen pas z nastavljivo vrvico, ki omogoča optimalno prilagajanje postavi, ter elegantni detajli gub pod pasom, ki hlačam dodajo pridih urejenosti. Dolžina nad gležnji jih naredi idealne za kombiniranje s športnimi copati ali poletnimi sandali.",
+    "velikost": "M",
+    "barva": "Bela",
+    "basket": false
+  },
+  {
+    "id": 21,
+    "naziv": "Jakna",
+    "cena": 80,
+    "slika": "images/pexels-eugenelisyuk-13431095.jpg",
+    "opis": "Modna in izjemno topla ženska jakna v rjavi barvi, ki spominja na klasičen letalski slog. Notranjost in ovratnik sta podložena z mehkim umetnim krznom v kremni barvi, kar nudi vrhunsko toplotno izolacijo in udobje v mrzlih dneh. Jakna ima strukturiran kroj z opaznimi šivi, ki poudarijo njen robusten, a hkrati eleganten videz. Je idealna izbira za plastenje čez pletenine, odlično pa se poda tudi h krilom z vzorcem in visokim škornjem za sodoben ulični slog.",
+    "velikost": "L",
+    "barva": "",
+    "basket": false
+  },
+  {
+    "id": 22,
+    "naziv": "Hlače",
+    "cena": 40,
+    "slika": "images/pexels-heitorverdifotos-2343661.jpg",
+    "opis": "Klasične oprijete kavbojke v temno modri barvi, ki so nepogrešljiv kos vsake ženske garderobe. Izdelane so iz kakovostnega in raztegljivega denima, ki se popolnoma prilagodi postavi in nudi udobje skozi ves dan. Hlače imajo visok pas, ki poudari linijo telesa, ter modno zavihane robove hlačnic, kar jim daje sproščen videz. Odlično se kombinirajo s pletenimi jopami, preprostimi majicami in športnimi copati za brezčasen uličen slog.",
+    "velikost": "S",
+    "barva": "Modra",
+    "basket": false
+  },
+  {
+    "id": 23,
+    "naziv": "Jakna",
+    "cena": 65,
+    "slika": "images/pexels-hurrahsuhail-11124833.jpg",
+    "opis": "Sodobna moška prešita jakna v privlačni vijolični barvi, ki nudi odlično zaščito v hladnejših dneh. Odlikuje jo funkcionalna zasnova s horizontalnim prešivanjem, ki enakomerno porazdeli toplo polnilo, ter vgrajena kapuca za dodatno zavetje pred vetrom. Jakna je opremljena s praktičnimi stranskimi žepi na zadrgo in se s svojim oprijetim krojem odlično poda k sproščenemu džinsu, kar jo naredi idealno za zimske sprehode ali vsakodnevne opravke v mestu.",
+    "velikost": "L",
+    "barva": "",
+    "basket": false
+  },
+  {
+    "id": 24,
+    "naziv": "Obleka",
+    "cena": 45,
+    "slika": "images/pexels-jill-burrow-6773212.jpg",
+   "opis": "Ljubka kratka obleka v nežno rožnati barvi, prekrita z drobnim cvetličnim vzorcem v modrih in rdečih tonih. Obleka ima eleganten kvadraten izrez in dolge rokave z nežno nabranimi manšetami, ki poudarijo romantičen značaj oblačila. V pasu se nahaja ujemajoč se trak za zavezovanje v pentljo, ki omogoča poljubno poudarjanje postave. Izdelana je iz lahkotnega in prijetnega materiala, kar jo naredi idealno za pomladne sprehode, dnevna druženja ali sproščene praznične priložnosti.",
+    "velikost": "S",
+    "barva": "",
+    "basket": false
+  },
+  {
+    "id": 25,
+    "naziv": "Jakna",
+    "cena": 55,
+    "slika": "images/pexels-jonathanborba-20029553.jpg",
+    "opis": "Sodoben ženski suknjič v snežno beli barvi, ki združuje sproščenost in eleganco. Posebnost jakne so tričetrtinski rokavi z okrasnimi vezalkami na manšetah, ki omogočajo poljubno nabiranje in dodajo unikaten modni detajl. Izdelana je iz lahkotnega materiala z vidno teksturo, kar jo naredi idealno za prehodna obdobja ali svež poletni večer. Zaradi svojega podaljšanega kroja in odprtega sprednjega dela se odlično poda h krilom s pepita vzorcem in preprostim črnim majicam za urejen pisarniški ali mestni videz.",
+    "velikost": "M",
+    "barva": "Bela",
+    "basket": false
+  },
+  {
+    "id": 26,
+    "naziv": "Majica",
+    "cena": 10,
+    "slika": "images/pexels-jonathon-burton-1310223-2560894.jpg",
+    "opis": "Atraktivna moška majica s kratkimi rokavi v sončno rumeni barvi, ki jo krasi ikoničen retro potisk priljubljene arkadne igre Pac-Man. Majica je izdelana iz mehkega in trpežnega bombaža, ki zagotavlja udobje in zračnost skozi celoten dan. Posebnost dizajna so japonski pismenki, ki dopolnjujejo grafiko in majici dodajo moden 'streetwear' pridih. S svojim klasičnim krojem se odlično poda h kavbojkam ali kratkim hlačam, kar jo naredi idealno izbiro za sproščen poletni videz.",
+    "velikost": "L",
+    "barva": "",
+    "basket": false
+  },
+  {
+    "id": 27,
+    "naziv": "Majica",
+    "cena": 10,
+    "slika": "images/pexels-joshua-roberts-212557837-12922525.jpg",
+    "opis": "Modna moška majica s kratkimi rokavi v klasični črni barvi, ki jo krasi velik retro navdihnjen grafični potisk na temo raziskovanja vesolja. Motiv prikazuje stilizirano raketo, ki leti mimo planetov osončja, spremlja pa ga napis 'The Solar System'. Majica je izdelana iz udobnega bombaža in ima priljubljen 'oversized' sproščen kroj, ki je idealen za ustvarjanje trendovskih uličnih kombinacij. Odlično se poda k temnim kavbojkam ali kratkim hlačam za sproščen, a vizualno zanimiv videz.",
+    "velikost": "XL",
+    "barva": "Črna",
+    "basket": false
+  },
+  {
+    "id": 28,
+    "naziv": "Obleka",
+    "cena": 75,
+    "slika": "images/pexels-karl-rayson-10231869-31240337.jpg",
+    "opis": "Osupljiva kratka obleka v intenzivni 'hot pink' rožnati barvi, ki združuje moderen kroj s pridihom igrivosti. Obleko odlikujejo kratki napihnjeni rokavi in eleganten visok ovratnik, na hrbtni strani pa preseneti z drznim izrezom v obliki trikotnika. Poseben modni poudarek sta vrsta drobnih oranžnih gumbov in velika oranžna pentlja na spodnjem delu hrbtnega izreza, kar ustvarja čudovit barvni kontrast. Zaradi strukturiranega materiala in rahlo razširjenega spodnjega dela je obleka popolna izbira za koktajl zabave ali posebne priložnosti, kjer želite pustiti močan vtis.",
+    "velikost": "S",
+    "barva": "Rdeča",
+    "basket": false
+  },
+  {
+    "id": 29,
+    "naziv": "Jakna",
+    "cena": 95,
+    "slika": "images/pexels-keen-61828480-9459488.jpg",
+    "opis": "Visoko zmogljiva moška športna jakna v opazni fluorescentno rumeni barvi, ki zagotavlja odlično vidljivost in zaščito v vseh vremenskih razmerah. Jakna je zasnovana za aktivno uporabo na prostem, saj vključuje nastavljivo kapuco, visoko zapenjanje do brade in integrirane podaljšane rokave z odprtino za palec, ki preprečujejo vdor hladnega zraka. Vodoodbojen material in funkcionalni žepi na zadrgo zagotavljajo suhost in varno shranjevanje osebnih predmetov, medtem ko moden in ergonomičen kroj omogoča popolno svobodo gibanja pri smučanju, pohodništvu ali teku.",
+    "velikost": "L",
+    "barva": "Zelena",
+    "basket": false
+  },
+  {
+    "id": 30,
+    "naziv": "Obleka",
+    "cena": 55,
+    "slika": "images/pexels-khabbab-abdelmaqsoud-5536074-11295321.jpg",
+   "opis": "Klasična in prefinjena kratka obleka v črni barvi, ki jo krasi brezčasen vzorec drobnih belih pik. Obleka ima laskav V-izrez in kratke rokave, njen sproščen kroj pa zagotavlja udobje in lahkotnost gibanja skozi ves dan. Izdelana je iz mehkega materiala, ki se lepo poda postavi, hkrati pa omogoča nešteto možnosti kombiniranja – od drznega videza z rdečo šminko in klobukom do bolj umirjene poslovne elegance. Je popolna izbira za poletne večere ali sproščene mestne sprehode.",
+    "velikost": "M",
+    "barva": "Črna",
+    "basket": false
+  },
+  {
+    "id": 31,
+    "naziv": "Krilo",
+    "cena": 45,
+    "slika": "images/pexels-maksgelatin-4663319.jpg",
+    "opis": "Čudovito plisirano krilo srednje dolžine, ki navdušuje z elegantnim barvnim prelivom (ombre učinek) od bogate rjavo-oranžne barve pri pasu do čiste bele na spodnjem robu. Krilo je izdelano iz lahkega, a strukturiranega materiala, ki ob gibanju ustvarja dinamičen in zračen učinek. Visok pas s tankimi gubami poudari postavo in omogoča udobno nošenje. To krilo je popolna izbira za modno ozaveščene ženske, ki želijo klasičnemu pliseju dodati sodoben umetniški pridih, hkrati pa se odlično kombinira s salonarji za prefinjen večerni videz.",
+    "velikost": "S",
+    "barva": "Bela",
+    "basket": false
+  },
+  {
+    "id": 32,
+    "naziv": "Jakna",
+    "cena": 60,
+    "slika": "images/pexels-misho-chachanidze-29104578-11250594.jpg",
+    "opis": "Modna ženska puhovka v nežni kremno bež barvi, ki združuje udobje in sodoben ulični slog. Jakna ima kratek 'cropped' kroj in široke rokave, kar ji daje trendovski volumen. Visok ovratnik in toplo prešito polnilo zagotavljata odlično zaščito pred mrazom, medtem ko nevtralna barva omogoča enostavno kombiniranje z zimskimi dodatki, kot sta ujemajoč se klobuk in pleten pulover. Idealna izbira za sproščene zimske dni v naravi ali mestu.",
+   "velikost": "S",
+    "barva": "Bela",
+    "basket": false
+  },
+  {
+    "id": 33,
+    "naziv": "Hlače",
+    "cena": 35,
+    "slika": "images/pexels-quang-viet-nguyen-107013384-11716436.jpg",
+    "opis": "Trpežne moške cargo hlače v vojaško zeleni barvi, ki so idealna izbira za ljubitelje funkcionalnega in sproščenega sloga. Hlače odlikujejo značilni prostorni stranski žepi s poklopci na hlačnicah, ki nudijo obilo prostora za shranjevanje. Izdelane so iz močnega bombažnega materiala z vidno teksturo, ki zagotavlja dolgotrajno uporabo in udobje. Klasičen raven kroj se odlično poda k športnim copatom in preprostim majicam, kar ustvarja brezčasen 'utility' videz za vsakodnevne opravke.",
+    "velikost": "L",
+    "barva": "Zelena",
+    "basket": false
+  },
+  {
+    "id": 34,
+    "naziv": "Jakna",
+    "cena": 50,
+    "slika": "images/pexels-raulkingr-5698039.jpg",
+    "opis": "Modna moška jakna v topli gorčično rumeni barvi, izdelana iz kakovostnega rebrastega žameta. Jakno odlikuje klasičen kroj z ovratnikom in zapenjanjem na gumbe, dopolnjujejo pa jo štirje praktični žepi na sprednji strani – dva prsna žepa s poklopci in dva večja spodnja žepa. Zaradi svoje teksture in trpežnega materiala je odlična izbira za prehodna obdobja, saj vsakemu videzu doda pridih retro sloga in urbane urejenosti.",
+    "velikost": "L",
+    "barva": "",
+    "basket": false
+  },
+  {
+    "id": 35,
+    "naziv": "Krilo",
+    "cena": 15,
+    "slika": "images/pexels-sa-ri-hu-nh-211956513-12736773.jpg",
+    "opis": "Klasično črno krilo z visokim pasom in elegantnim A-krojem, ki sega nad kolena. Izdelano je iz gladkega, kakovostnega materiala, ki lepo obdrži svojo obliko in poudari ženstveno silhueto. Krilo se zapenja s skrito zadrgo na strani, kar zagotavlja brezhiben videz. Je izjemno vsestransko, saj se odlično poda h kontrastnim oprijetim majicam brez rokavov za svež poletni slog ali k srajcam za bolj formalne priložnosti ob vodi ali v mestu.",
+    "velikost": "S",
+    "barva": "Črna",
+    "basket": false
+  },
+  {
+    "id": 36,
+    "naziv": "Jakna",
+    "cena": 35,
+    "slika": "images/pexels-shalom-ejiofor-2153542296-32782661.jpg",
+    "opis": "Klasična univerziatna jakna v drzni rdeči barvi s kontrastnimi belimi rokavi, ki pričara pristen retro slog. Jakno krasi velika vezena črka 'P' na prsih, ki poudari športni značaj oblačila. Izdelana je iz toplega in mehkega materiala, ima patentne obrobe na ovratniku in zapenjanje na gumbe, kar zagotavlja udobje in brezčasen videz. Je idealen kos za ljubitelje ulične mode, saj se odlično kombinira z džinsom in športnimi copati.",
+    "velikost": "M",
+    "barva": "Rdeča",
+    "basket": false
+  },
+  {
+    "id": 37,
+    "naziv": "Jakna",
+    "cena": 35,
+    "slika": "images/pexels-shyam-mishra-31007-12646826.jpg",
+    "opis": "Trendovska moška univerziatna jakna, ki izstopa z drzno barvno kombinacijo in detajli. Osrednji del jakne je v črni barvi z modro-belimi črtastimi patentnimi obrobami, rokava pa sta asimetrična – eden v energični oranžni in drugi v globoki vijolični barvi. Jakno krasijo izstopajoči vezeni našitki, vključno z veliko črko 'M' na prsih in grafičnimi elementi na rokavih. Izdelana je iz gladkega materiala s sijajem in se zapenja s pritiskači, kar ustvarja popoln 'streetwear' videz za vse, ki želijo izraziti svoj unikaten slog.",
+    "velikost": "XL",
+    "barva": "Črna",
+    "basket": false
+  },
+  {
+    "id": 38,
+    "naziv": "Obleka",
+    "cena": 40,
+    "slika": "images/pexels-skgphotography-5518796.jpg",
+    "opis": "Prefinjena kratka obleka brez naramnic v klasični črni barvi, ki izstopa z bogatimi zlatimi detajli. Zgornji del obleke je oblikovan v srčast izrez z zlatim obrobom, ki poudari dekolte, medtem ko spodnji del krila krasi širok pas z vezenim geometrijskim vzorcem v modrih in zlatih tonih. Obleka ima strukturiran kroj, ki se v pasu zoži in nato rahlo razširi, kar ustvarja elegantno silhueto. Je popolna izbira za večerne zabave, maturantske plese ali svečane dogodke na prostem, kjer želite združiti tradicijo in sodoben glamur.",
+    "velikost": "S",
+    "barva": "Črna",
+    "basket": false
+  },
+  {
+    "id": 39,
+    "naziv": "Majica",
+    "cena": 5,
+    "slika": "images/pexels-vie-studio-8148577.jpg",
+    "opis": "Kakovostna ženska majica s kratkimi rokavi v topli oker rjavi barvi, ki predstavlja popolno osnovo za vsakodnevno plastenje. Majica je izdelana iz 100 % naravnega bombaža, ki koži omogoča dihanje in nudi izjemno mehkobo. Odlikuje jo klasičen okrogel izrez in rahlo sproščen kroj, ki se lepo poda vsaki postavi. Zaradi svoje minimalistične zasnove brez odvečnih detajlov je ta majica vsestranski kos, ki se odlično kombinira s kavbojkami, krili ali pod suknjičem za urejen, a sproščen videz.",
+    "velikost": "M",
+    "barva": "",
+    "basket": false
+  },
+  {
+    "id": 40,
+    "naziv": "Obleka",
+    "cena": 30,
+    "slika": "images/pexels-vlada-karpovich-4823249.jpg",
+    "opis": "Čudovita poletna obleka v živahni rdeči barvi, posuta z drobnimi belimi pikami, ki ustvarja romantičen in brezčasen videz. Obleka ima laskav kroj na preklop z V-izrezom, ki ga krasijo nežni volančki vzdolž roba in rokavov. V pasu se zavezuje s trakom, kar omogoča popolno prilagajanje postavi, spodnji del pa se konča z lahkotnim volanom za dodatno valovanje ob hoji. Izdelana je iz zračnega materiala, ki je idealen za tople dni, sprehode po cvetočih poljih ali sproščena poletna druženja.",
+    "velikost": "L",
+    "barva": "Rdeča",
+    "basket": false
+  },
+  {
+    "id": 41,
+    "naziv": "Hlače",
+    "cena": 25,
+    "slika": "images/pexels-xena-fashion-1112450383-20788494.jpg",
+    "opis": "Elegantne ženske hlače v nežni kremno beli barvi, izdelane iz materiala s svilenim leskom, ki poskrbi za prestižen videz. Hlače imajo visok pas in raven kroj, ki sega do gležnjev, kar ustvarja modno in urejeno silhueto. Poseben poudarek je na spodnjem robu hlačnic, ki ga krasi čudovito vezenje s cvetličnim motivom v rožnatih in zelenih tonih. Zaradi svoje prefinjenosti so te hlače odlična izbira za svečane priložnosti, poletne zabave ali elegantne večerne izhode.",
+    "velikost": "M",
+    "barva": "Bela",
+    "basket": false
+  }
+]
+

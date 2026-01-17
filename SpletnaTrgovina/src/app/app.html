@@ -1,4 +1,15 @@
 
+@if(loggedIn)
+{
+    <app-header></app-header>
+}
+
+<router-outlet></router-outlet>
 
 
-<router-outlet />
+@if(loggedIn)
+{
+    <app-footer></app-footer>
+}
+
+
