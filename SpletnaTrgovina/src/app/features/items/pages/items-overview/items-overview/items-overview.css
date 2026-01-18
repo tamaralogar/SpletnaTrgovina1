@@ -1,8 +1,10 @@
 .basket { background-color: rgba(5, 90, 30);
-    opacity: 0.5 !important }
+    opacity: 0.8 !important ;
+    border: 5px solid #d4af37 !important}
 
 
 .nobasket { background-color: rgba(5, 90, 30);
-    opacity: 1 !important }
+    opacity: 1 !important;
+    border: 2px solid #d4af37 !important }
 
  
