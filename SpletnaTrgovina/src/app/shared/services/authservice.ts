@@ -30,6 +30,7 @@ export class AuthentificationService {
 
    public isLoggedIn(): boolean {
     return !!this.getToken();
+    
   }
 
    public logout(): void {

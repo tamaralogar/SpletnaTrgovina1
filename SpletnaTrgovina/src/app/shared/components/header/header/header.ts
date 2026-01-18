@@ -18,8 +18,8 @@ export class Header {
   public logMeOut() {
 
     console.log("Kliče")
-    //this.authService.logout()
-    //this.router.navigate(["/login"])
+    this.authService.logout()
+    this.router.navigate(["/login"])
   }
 
 }
