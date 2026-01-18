@@ -14,7 +14,7 @@ export class Checkout {
   constructor(private basketService: BasketService, private router: Router) {}
 
   koncajNakup() : void {
-    this.basketService.clearBasket();
+    this.basketService.clearBasket(); 
 
     this.router.navigate(['/items']);
   }
