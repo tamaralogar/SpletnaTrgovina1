@@ -4,15 +4,14 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
-    font-weight: bold;
+    color: rgb(0, 0, 0);
+    
 }
 .main-container {
     background-color: rgb(255, 255, 255, 0.7); 
     width: 100%;
     margin: 0 auto;
     min-height: 100vh;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     padding: 40px;
    background: linear-gradient(
         to right, 
