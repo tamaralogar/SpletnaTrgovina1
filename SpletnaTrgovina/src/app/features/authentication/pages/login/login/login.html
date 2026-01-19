@@ -8,18 +8,22 @@
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">E-poštni naslov</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="primer@gmail.com" required
-            #email="ngModel" name="email" [(ngModel)]="oldUser.email"
+            #email="ngModel" name="email" email [(ngModel)]="registeredUser.email"
                 [ngClass]="{'is-invalid': email.invalid && (email.touched || email.dirty || loginForm.submitted),
                             'is-valid': email.valid && (email.touched || email.dirty || loginForm.submitted)}">
             @if (email.invalid && (email.touched || email.dirty || loginForm.submitted)) {
             <div class="invalid-feedback d-block">
+                @if (email.errors?.['required']) {
                 Obvezno polje!
+            } @else if (email.errors?.['email']) {
+                Vnesite e-poštni naslov!
+            }
             </div>}
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Geslo</label>
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Geslo" required
-            name="password" [(ngModel)]="oldUser.password" #password="ngModel"
+            name="password" [(ngModel)]="registeredUser.password" #password="ngModel"
                 [ngClass]="{'is-invalid': password.invalid && (password.touched || password.dirty || loginForm.submitted),
                             'is-valid': password.valid && (password.touched || password.dirty || loginForm.submitted)}">
             @if (password.invalid && (password.touched || password.dirty || loginForm.submitted)) {
@@ -32,7 +36,7 @@
             <label class="form-check-label" for="exampleCheck1">Zapomni si me</label>
         </div>-->
         <div class="d-flex mb-3">
-            <div class="p-2"><button type="submit" class="btn btn-success" [disabled]="password.invalid">Prijava</button></div>
+            <div class="p-2"><button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Prijava</button></div>
             <div class="ms-auto p-2"><a [routerLink]="['/signup']" class="btn btn-link">Še nimaš računa?</a></div>
         </div>
     </form>

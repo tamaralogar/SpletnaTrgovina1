@@ -4,7 +4,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "resolveJsonModule": true, //dodano za import json
+    "esModuleInterop": true //dodano za popravek razlik
   },
   "include": [
     "src/**/*.ts"

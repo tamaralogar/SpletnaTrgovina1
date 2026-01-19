@@ -7,15 +7,12 @@ import { AuthentificationService } from '../../shared/services/authservice';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(
-    private authService: AuthentificationService,
-    private router: Router
-  ) {}
+  constructor(private authService: AuthentificationService, private router: Router) {
 
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): boolean {
+  }
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean 
+  {
     if (this.authService.isLoggedIn()) {
       return true;
     } else {

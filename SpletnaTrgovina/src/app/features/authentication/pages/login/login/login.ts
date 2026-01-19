@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, NgZone } from '@angular/core';
 
 import { User } from '../../../../../shared/classes/user';
 import { NgForm } from '@angular/forms';
@@ -13,33 +13,41 @@ import { Router } from '@angular/router';
 })
 export class Login {
 
-  public oldUser: User;
- 
+  public registeredUser: User;
 
-  constructor(private authService : AuthentificationService, private router: Router) {
-    this.oldUser = new User("", "","", "");
-    
-   }
 
-   public onSubmit(loginForm: NgForm): void {
+  constructor(private authService: AuthentificationService, private router: Router, private cdr: ChangeDetectorRef, private ngZone: NgZone) {
+    this.registeredUser = new User("", "", "", "");
+
+  }
+
+  public onSubmit(loginForm: NgForm): void {
 
     if (loginForm.valid) {
-    
-      //token
-      const loginSuccess = this.authService.login (this.oldUser.email, this.oldUser.password);
-      
-      if (loginSuccess) {
-         alert("Uspešno ste se prijavili.");
-      } else  if (this.oldUser.email !== "tamara"){
-          alert("Uporabnik ni registriran!")
-      }else{
-          alert("Napačno geslo!")
-      }
-      
-      this.router.navigate(["/items"])
 
-      }
+      this.authService.login(this.registeredUser.email, this.registeredUser.password).subscribe({
+        next: (response) => {
+          console.log('Odgovor strežnika:', response);
+          
+          if (response.token) {
+            localStorage.setItem('token', response.token);
+          }
 
-    } 
-  
+          this.ngZone.run(() => {
+            this.router.navigate(["/items"]).then(() => {
+              this.cdr.detectChanges();
+            });
+          });
+        },
+        error: (err) => {
+          if (err.status === 401) {  //  če interceptor vrne 401
+            alert("Napačen email ali geslo!");
+          } else {
+            alert("Prišlo je do napake pri prijavi.");
+          }
+          this.cdr.detectChanges();
+        }
+      });
+    }
+  }
 }

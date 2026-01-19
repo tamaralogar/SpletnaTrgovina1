@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, NgZone } from '@angular/core';
 
 import { User } from '../../../../../shared/classes/user';
 import { NgForm } from '@angular/forms';
@@ -15,29 +15,41 @@ export class Signup {
   public newUser: User;
   public confirmed: boolean = false;
 
-  constructor(private router : Router, private authService : AuthentificationService) {
+  constructor(private router : Router, private authService : AuthentificationService, private cdr : ChangeDetectorRef, private ngZone : NgZone) {
     this.newUser = new User("", "", "", "");
    }
 
 public onSubmit(registrationForm: NgForm): void {
 
-    if (this.confirmed && this.newUser.password === this.newUser.confirmPassword && registrationForm.valid) {
-      //Izpis ali je registracija uspešna ali ne
-    let text = `Uspešno ste se registrirali: ${this.newUser.username} z e-poštnim naslovom: ${this.newUser.email} in geslom: ${this.newUser.password}`;
-    alert(text);
-    console.log(text);
-    } else {
-        alert("Gesli se ne ujemata. Niste registrirani");
-        console.log("Gesli se ne ujemata. Niste registrirani");
-      }
+    if (this.newUser.password !== this.newUser.confirmPassword) {
+      alert ("Gesli se ne ujemata. Niste registrirani.");
+      return;
+    }
 
-
-//Tukaj še dodaj!!!
-
+  if (registrationForm.valid && this.confirmed) {
+      
+      this.authService.signup(this.newUser.email, this.newUser.password).subscribe({
+        next: (response) => {
+          alert("Uspešno ste se registrirali.");
+          
+          this.ngZone.run(() => {
+            this.router.navigate(['/items']).then(() => {
+              this.cdr.detectChanges();
+            });
+          });
+        },
+        error: (err) => {
+          if (err.status === 400) {
+            alert("Uporabnik s tem e-naslovom je že registriran!");
+          } else {
+            alert("Prišlo je do napake pri registraciji.");
+          }
+          this.cdr.detectChanges();
+        }
+      });
+    }
   }
-
-
-
-
-
 }
+
+
+

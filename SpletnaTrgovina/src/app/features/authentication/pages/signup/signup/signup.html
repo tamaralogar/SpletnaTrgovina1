@@ -18,13 +18,17 @@
         </div>
         <div class="mb-3 user.email">
             <label for="exampleInputEmail1" class="form-label">E-poštni naslov</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            <input type="email" email class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                 placeholder="primer@gmail.com" name="email" required [(ngModel)]="newUser.email" #email="ngModel"
                 [ngClass]="{'is-invalid': email.invalid && (email.touched || email.dirty || registrationForm.submitted),
                             'is-valid': email.valid && (email.touched || email.dirty || registrationForm.submitted)}">
             @if (email.invalid && (email.touched || email.dirty || registrationForm.submitted)) {
             <div class="invalid-feedback d-block">
+                 @if (email.errors?.['required']) {
                 Obvezno polje!
+            } @else if (email.errors?.['email']) {
+                Vnesite e-poštni naslov!
+            }
             </div>}
             <div class="mb-3 user.password">
                 <label for="exampleInputPassword1" class="form-label">Geslo</label>

@@ -17,7 +17,7 @@ export class Header {
 
   public logMeOut() {
 
-    console.log("Kliče")
+    console.log("Odjava")
     this.authService.logout()
     this.router.navigate(["/login"])
   }

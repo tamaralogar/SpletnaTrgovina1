@@ -1,10 +1,11 @@
 import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//za mockinterceptorje
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 
 //uvoz ForumsModule
 import { FormsModule } from '@angular/forms';
-
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
@@ -16,6 +17,9 @@ import { ItemsDetails } from './features/items/pages/items-details/items-details
 import { ItemsOverview} from './features/items/pages/items-overview/items-overview/items-overview';
 import { Basket } from './features/items/pages/basket/basket/basket';
 import { Checkout } from './features/items/pages/checkout/checkout';
+
+// za mockinterceptor
+import { mockInterceptor } from './core/interceptor';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,8 @@ import { Checkout } from './features/items/pages/checkout/checkout';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection()
+    provideZonelessChangeDetection(),
+    provideHttpClient(withInterceptors([mockInterceptor]))
   ],
   bootstrap: [App]
 })
