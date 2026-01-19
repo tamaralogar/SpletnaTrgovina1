@@ -1,5 +1,5 @@
 
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, signal, computed, OnInit, ChangeDetectorRef } from '@angular/core';
 
 import { Item } from '../../../../../shared/classes/item';
 //import jsonitems from '../../../../../../../public/assets/items.json';
@@ -13,6 +13,7 @@ import { ItemsService } from '../../../../../shared/services/itemsservice';
   templateUrl: './items-overview.html',
   styleUrl: './items-overview.css',
 })
+
 export class ItemsOverview implements OnInit {
   public items: Item[] = [];
 
