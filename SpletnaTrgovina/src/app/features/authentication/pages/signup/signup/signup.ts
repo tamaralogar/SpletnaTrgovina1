@@ -33,7 +33,7 @@ public onSubmit(registrationForm: NgForm): void {
           alert("Uspešno ste se registrirali.");
           
           this.ngZone.run(() => {
-            this.router.navigate(['/items']).then(() => {
+            this.router.navigate(['/login']).then(() => {
               this.cdr.detectChanges();
             });
           });
