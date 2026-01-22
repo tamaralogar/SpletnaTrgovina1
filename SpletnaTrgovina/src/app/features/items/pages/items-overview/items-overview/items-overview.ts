@@ -5,6 +5,7 @@ import { Item } from '../../../../../shared/classes/item';
 //import jsonitems from '../../../../../../../public/assets/items.json';
 import { BasketService } from '../../../../../shared/services/basket';
 import { ItemsService } from '../../../../../shared/services/itemsservice';
+import { Observable, map } from 'rxjs';
 
 
 @Component({
@@ -19,9 +20,9 @@ export class ItemsOverview implements OnInit {
 
   constructor(private basketService: BasketService, private itemsService: ItemsService, private cdr: ChangeDetectorRef) { }
 
-  ngOnInit(): void {
+  /*ngOnInit(): void {
     this.loadItems();
-  }
+  }*/
 
   ToggleBasket(item: Item): void {
     const alreadyIn = this.basketService.isInBasket(item);
@@ -38,8 +39,30 @@ export class ItemsOverview implements OnInit {
     console.log('BASKET status za ' + item.naziv + ': ' + item.basket);
   }
 
+  items$!: Observable<Item[]>;
 
-  private loadItems() {
+  ngOnInit(){
+      this.items$ = this.itemsService.getItems().pipe(
+    map((data) => {
+      return data.map((jsonItem) => {
+        const isCurrentlyInBasket = this.basketService.isInBasket({ id: jsonItem.id } as Item);
+
+        return new Item(
+          jsonItem.id,
+          jsonItem.naziv || '',
+          jsonItem.cena || 0,
+          jsonItem.slika || '',
+          jsonItem.opis || '',
+          jsonItem.velikost || '',
+          jsonItem.barva || '',
+          isCurrentlyInBasket
+        );
+      });
+    })
+  );
+  }
+
+  /*private loadItems() {
     console.log('Nalagam artikle...');
     this.itemsService.getItems().subscribe((data) => {
       this.items = data.map((jsonItem) => {
@@ -61,5 +84,5 @@ export class ItemsOverview implements OnInit {
       this.cdr.detectChanges(); //posodobi-da se naložijo izdelki
 
   });
-  }
+  }*/
 }

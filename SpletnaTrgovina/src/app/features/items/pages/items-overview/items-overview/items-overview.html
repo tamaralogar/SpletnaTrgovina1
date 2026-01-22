@@ -1,6 +1,9 @@
 <div class="main-container">
     <br />
     <h1 style="padding-left: 10%; color:black;">Ponudba:</h1>
+
+    @if (items$ | async; as items) {
+
     <div class="container-fluid" style="padding-left: 10%; padding-right: 10%;">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3"
             style="justify-content: center; padding: 20px;">
@@ -8,7 +11,6 @@
             @for (item of items; track item.id; let i = $index) {
 
             <div class="col" [ngClass]="i % 2 === 0 ? 'd-block' : 'd-none'">
-
                 <div class="card h-100 shadow-sm" [ngClass]="item.basket ? 'basket' : 'nobasket'">
                     <img src="{{ item.slika }}" class="card-img-top" alt="..." />
 
@@ -22,17 +24,9 @@
                                 [attr.data-bs-target]="'#detailsCard' + item.id">
                                 Podrobnosti
                             </button>
-
-                            @if(!item.basket){
                             <button (click)="ToggleBasket(item)" class="btn btn-outline-light btn-sm flex-fill">
-                                Dodaj v košarico
+                                {{ item.basket ? 'Odstrani iz košarice' : 'Dodaj v košarico' }}
                             </button>
-                            }
-                            @else {
-                            <button (click)="ToggleBasket(item)" class="btn btn-outline-light btn-sm flex-fill">
-                                Odstrani iz košarice
-                            </button>
-                            }
                         </div>
                     </div>
                 </div>
@@ -42,9 +36,16 @@
                      - remove button is visible when in basket -->
                 <app-items-details [item]="item" [disableToggleBasket]="false" [showRemoveButton]="true">
                 </app-items-details>
-
             </div>
+            } @empty {
+            <p> Trenutno ni zaloge.</p>
             }
         </div>
     </div>
+    } @else {
+    <div style="text-align: center; padding: 50px;">
+        <div class="spinner-border" role="status"></div>
+        <p>Nalagam artikle...</p>
+    </div>
+    }
 </div>

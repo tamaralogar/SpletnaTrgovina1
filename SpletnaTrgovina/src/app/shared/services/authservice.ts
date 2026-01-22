@@ -14,10 +14,8 @@ export class AuthentificationService {
     return this.http.post<any>('/api/login', { email, password }).pipe(
       tap(response => {
         // uspešna prijava
-        if (response.token) {
           localStorage.setItem('jwtToken', response.token);
           localStorage.setItem('userEmail', response.email);
-        }
       })
     );
   }
