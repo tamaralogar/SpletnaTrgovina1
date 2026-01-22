@@ -10,7 +10,7 @@
 
             @for (item of items; track item.id; let i = $index) {
 
-            <div class="col" [ngClass]="i % 2 === 0 ? 'd-block' : 'd-none'">
+            <div class="col">
                 <div class="card h-100 shadow-sm" [ngClass]="item.basket ? 'basket' : 'nobasket'">
                     <img src="{{ item.slika }}" class="card-img-top" alt="..." />
 

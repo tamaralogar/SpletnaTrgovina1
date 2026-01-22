@@ -40,7 +40,7 @@
             </div>
             <div class="col-md-2">
                 <h6>Velikost</h6>
-                <select class="form-select form-select-sm">
+                <select class="form-select form-select-sm" [(ngModel)]="filterModel.velikost">
                     <option selected>Vse velikosti</option>
                     <option>S</option>
                     <option>M</option>
@@ -51,59 +51,59 @@
             <div class="col-md-2">
                 <h6>Cena do:</h6>
                 <div class="input-group">
-                    <input type="number" id="priceInput" class="form-control" placeholder="Vnesi ceno" min="0"
-                        value="50">
+                    <input type="number" id="priceInput" class="form-control"  [(ngModel)]="filterModel.maxCena" placeholder="Vnesi ceno" min="0"
+                        value="500">
                     <span class="input-group-text">€</span>
                 </div>
             </div>
             <div class="col-md-2">
                 <h6>Kategorija</h6>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check1">
+                    <input class="form-check-input" [(ngModel)]="filterModel.kategorije.Majice" type="checkbox" id="check1">
                     <label class="form-check-label">Majice</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check2">
+                    <input class="form-check-input" [(ngModel)]="filterModel.kategorije.Hlace" type="checkbox" id="check2">
                     <label class="form-check-label">Hlače</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check2">
+                    <input class="form-check-input" [(ngModel)]="filterModel.kategorije.Krila" type="checkbox" id="check2">
                     <label class="form-check-label">Krila</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check2">
+                    <input class="form-check-input" [(ngModel)]="filterModel.kategorije.Obleke" type="checkbox" id="check2">
                     <label class="form-check-label">Obleke</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check2">
+                    <input class="form-check-input" [(ngModel)]="filterModel.kategorije.Jakne" type="checkbox" id="check2">
                     <label class="form-check-label">Jakne</label>
                 </div>
             </div>
             <div class="col-md-2">
                 <h6>Barva</h6>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check1">
+                    <input class="form-check-input" [(ngModel)]="filterModel.barve.Rdeca" type="checkbox" id="check1">
                     <label class="form-check-label">Rdeča</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check2">
+                    <input class="form-check-input" [(ngModel)]="filterModel.barve.Modra" type="checkbox" id="check2">
                     <label class="form-check-label">Modra</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check2">
+                    <input class="form-check-input" [(ngModel)]="filterModel.barve.Zelena" type="checkbox" id="check2">
                     <label class="form-check-label">Zelena</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check2">
+                    <input class="form-check-input" [(ngModel)]="filterModel.barve.Bela" type="checkbox" id="check2">
                     <label class="form-check-label">Bela</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check2">
+                    <input class="form-check-input" [(ngModel)]="filterModel.barve.Crna" type="checkbox" id="check2">
                     <label class="form-check-label">Črna</label>
                 </div>
             </div>
             <div class="col-md-2 d-flex align-items-end">
-                <button class="btn btn-success w-100">Uporabi filtre</button>
+                <button class="btn btn-success w-100" (click)="applyFilters()">Uporabi filtre</button>
             </div>
 
         </div>

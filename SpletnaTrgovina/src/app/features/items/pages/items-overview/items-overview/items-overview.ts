@@ -5,8 +5,24 @@ import { Item } from '../../../../../shared/classes/item';
 //import jsonitems from '../../../../../../../public/assets/items.json';
 import { BasketService } from '../../../../../shared/services/basket';
 import { ItemsService } from '../../../../../shared/services/itemsservice';
-import { Observable, map } from 'rxjs';
+import { Observable, map, combineLatest } from 'rxjs';
 
+
+const KATEGORIJE_MAP: { [key: string]: string[] } = {
+  "Majice": ["majica", "Majica"],
+  "Hlace": ["hlače", "Hlače"],
+  "Krila": ["krilo", "Krilo"],
+  "Obleke": ["Obleka", "obleka"],
+  "Jakne": ["Jakna", "jakna"]
+};
+
+const BARVE_MAP: { [key: string]: string[] } = {
+  "Rdeca": ["Rdeča", "rdeča", "rdeč", "rdečo", "Rdeč", "Rdečo"],
+  "Modra": ["Modra", "modra"],
+  "Zelena": ["Zelena", "zelena"],
+  "Bela": ["Bela", "bela"],
+  "Crna": ["črna", "Črna", "Črn", "črn"]
+};
 
 @Component({
   selector: 'app-items-overview',
@@ -15,14 +31,14 @@ import { Observable, map } from 'rxjs';
   styleUrl: './items-overview.css',
 })
 
+
+
 export class ItemsOverview implements OnInit {
   public items: Item[] = [];
 
-  constructor(private basketService: BasketService, private itemsService: ItemsService, private cdr: ChangeDetectorRef) { }
+  
 
-  /*ngOnInit(): void {
-    this.loadItems();
-  }*/
+  constructor(private basketService: BasketService, private itemsService: ItemsService, private cdr: ChangeDetectorRef) { }
 
   ToggleBasket(item: Item): void {
     const alreadyIn = this.basketService.isInBasket(item);
@@ -41,26 +57,31 @@ export class ItemsOverview implements OnInit {
 
   items$!: Observable<Item[]>;
 
-  ngOnInit(){
-      this.items$ = this.itemsService.getItems().pipe(
-    map((data) => {
-      return data.map((jsonItem) => {
-        const isCurrentlyInBasket = this.basketService.isInBasket({ id: jsonItem.id } as Item);
+    ngOnInit(): void {
+  this.items$ = combineLatest([
+    this.itemsService.getItems(),
+    this.itemsService.filters$
+  ]).pipe(
+    map(([items, filters]) => {
+      return items.filter(item => {
+        
+        const matchSize = filters.velikost === 'Vse velikosti' || item.velikost === filters.velikost;
+        const matchPrice = item.cena <= filters.maxCena;
+        const matchCat = filters.kategorije.length === 0 || filters.kategorije.some(izbranaKat => {
+          const kljucneBesedeKat = KATEGORIJE_MAP[izbranaKat] || [izbranaKat];
+          return kljucneBesedeKat.some(beseda => item.naziv.toLowerCase() === beseda.toLowerCase());
+        });
 
-        return new Item(
-          jsonItem.id,
-          jsonItem.naziv || '',
-          jsonItem.cena || 0,
-          jsonItem.slika || '',
-          jsonItem.opis || '',
-          jsonItem.velikost || '',
-          jsonItem.barva || '',
-          isCurrentlyInBasket
-        );
+        const matchColor = filters.barve.length === 0 || filters.barve.some(izbranaBarva => {
+          const kljucneBesedeBarva = BARVE_MAP[izbranaBarva] || [izbranaBarva];
+          return kljucneBesedeBarva.some(beseda => item.barva.toLowerCase() === beseda.toLowerCase());
+        });
+
+        return matchSize && matchPrice && matchCat && matchColor;
       });
     })
   );
-  }
+}
 
   /*private loadItems() {
     console.log('Nalagam artikle...');
