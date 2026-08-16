@@ -1,0 +1,9 @@
+# Virtualno okolje
+venv/
+
+# Python cache datoteke
+__pycache__/
+*.pyc
+
+# VS Code nastavitve 
+.vscode/
