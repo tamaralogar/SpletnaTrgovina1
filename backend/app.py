@@ -4,10 +4,12 @@ import flask
 from flask_cors import CORS
 
 from routes.items_routes import items_bp
+from routes.auth_routes import auth_bp
 
 app = flask.Flask(__name__)
 CORS(app)
 app.register_blueprint(items_bp)
+app.register_blueprint(auth_bp)
 
 @app.route('/')
 def home():
