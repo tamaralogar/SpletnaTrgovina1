@@ -5,6 +5,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from flask import Blueprint, jsonify, request
 from models.user_model import create_user, verify_user
+from jwt_utils import generate_jwt_token
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -33,8 +34,8 @@ def login():
 
     if user:
         return jsonify({
-            "token": f"mock-jwt-token{user['id']}",  
+            "token": generate_token(user['id'], user['email']),}",  
             "message": "Prijava uspesna", 
-            "email": user['email']}), 200
+            "email": user['email']), 200
     else:
         return jsonify({"error": "Neveljaven email ali geslo"}), 401

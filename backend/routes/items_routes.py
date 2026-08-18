@@ -5,10 +5,12 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from flask import Blueprint, jsonify, request
 from models.item_model import get_all_items
+from jwt_utils import token_required
 
 items_bp = Blueprint('items', __name__)
 
 @items_bp.route('/api/items', methods=['GET'])
+@token_required
 def get_items():
 
     velikost = request.args.get('velikost')
