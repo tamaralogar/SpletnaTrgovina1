@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import {Item} from "../classes/item";
 
@@ -10,12 +10,9 @@ export interface FilterState {
   barve: string[];
 }
 
-
 @Injectable({
   providedIn: 'root'
 })
-
-
 
 export class ItemsService {
 
@@ -30,8 +27,28 @@ export class ItemsService {
 
   constructor(private http: HttpClient) { }
 
-  getItems(): Observable<Item[]> {
-    return this.http.get<Item[]>('/api/items');
+  getItems(filters?: FilterState): Observable<Item[]> {
+    let params = new HttpParams();
+
+    if (filters) {
+      if (filters.velikost && filters.velikost !== "Vse velikosti") {
+        params = params.set('velikost', filters.velikost);
+      }
+
+      if (filters.maxCena != null) {
+        params = params.set('maxCena', filters.maxCena.toString());
+      }
+
+      if (filters.kategorije.length > 0) {
+        params = params.set('kategorije', filters.kategorije.join(','));
+      }
+
+      if (filters.barve.length > 0) {
+        params = params.set('barve', filters.barve.join(','));
+      }
+    }
+
+    return this.http.get<Item[]>('/api/items', { params });
   }
 
   updateFilters(newFilters: FilterState) {
