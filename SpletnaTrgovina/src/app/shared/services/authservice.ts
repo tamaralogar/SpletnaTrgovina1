@@ -2,12 +2,19 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 
+import {BasketService } from './basket';
+import { ItemsService } from './itemsservice';
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthentificationService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private basketService: BasketService,
+    private itemsService: ItemsService
+  ) { }
 
 
   public login(email: string, password: string): Observable<any> {
@@ -32,12 +39,38 @@ export class AuthentificationService {
   }
 
   public isLoggedIn(): boolean {
-    return !!this.getToken();
+    const token = this.getToken();
 
+    if (!token) {
+      return false;
+    }
+
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      const isExpired = payload.exp * 1000 < Date.now();
+
+      if (isExpired) {
+        this.logout();
+        return false;
+      }
+
+      return true;
+    } 
+    
+    catch {
+      return false;
+    }
   }
 
   public logout(): void {
     localStorage.removeItem('jwtToken');
     localStorage.removeItem('userEmail');
+    this.basketService.clearBasket();
+    this.itemsService.updateFilters({
+      velikost: 'Vse velikosti',
+      maxCena: 500,
+      kategorije: [],
+      barve: []
+    });
   }
 }

@@ -1,0 +1,12 @@
+# Virtualno okolje
+venv/
+
+# Python cache datoteke
+__pycache__/
+*.pyc
+
+# JWT ključ
+.env
+
+# VS Code nastavitve 
+.vscode/

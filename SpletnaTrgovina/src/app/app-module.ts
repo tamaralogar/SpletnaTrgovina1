@@ -17,9 +17,7 @@ import { ItemsDetails } from './features/items/pages/items-details/items-details
 import { ItemsOverview} from './features/items/pages/items-overview/items-overview/items-overview';
 import { Basket } from './features/items/pages/basket/basket/basket';
 import { Checkout } from './features/items/pages/checkout/checkout';
-
-// za mockinterceptor
-import { mockInterceptor } from './core/interceptor';
+import { jwtInterceptor } from './core/interceptor';
 
 @NgModule({
   declarations: [
@@ -41,7 +39,7 @@ import { mockInterceptor } from './core/interceptor';
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideHttpClient(withInterceptors([mockInterceptor]))
+    provideHttpClient(withInterceptors([jwtInterceptor]))
   ],
   bootstrap: [App]
 })

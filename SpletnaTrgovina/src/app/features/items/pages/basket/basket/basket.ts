@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { Component} from '@angular/core';
 import {Item } from '../../../../../shared/classes/item';
 import { BasketService } from '../../../../../shared/services/basket';
 import {Router} from '@angular/router';
@@ -13,9 +13,7 @@ import {Router} from '@angular/router';
 export class Basket {
   public items: Item[] = [];
   
-  constructor(public basketService: BasketService
-    , private router: Router
-  ) { }
+  constructor(public basketService: BasketService) { }
 
   ngOnInit(): void {
     this.items = this.basketService.getItems();
