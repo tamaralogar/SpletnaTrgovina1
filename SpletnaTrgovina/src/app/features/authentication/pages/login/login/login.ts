@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, NgZone } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { User } from '../../../../../shared/classes/user';
 import { NgForm } from '@angular/forms';
